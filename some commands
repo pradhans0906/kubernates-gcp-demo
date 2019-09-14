@@ -1,0 +1,9 @@
+To source git repo tp google cloud repo - gcloud source repos clone github_pradhans0906_kubernates-gcp-demo --p
+
+swirch to the directory github_pradhans0906_kubernates-gcp-demo/
+   
+BUild the image docker build -t my-image .
+configure docker to push or pull from container registry, you may need to enable container registry api as well - gcloud auth configure-docker
+Tag the image with the Gcloud registry, note the url may vary based on your project name - docker tag  ed08ecd9b5a3 gcr.io/quixotic-moment-252916/my-image:latest
+push the image - docker push gcr.io/quixotic-moment-252916/my-image:latest
+Verify it on the container registry
