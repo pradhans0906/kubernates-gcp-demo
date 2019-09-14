@@ -15,3 +15,10 @@ des=8
 kubectl scale deployments nginx-1 --replicas 4
 
 
+upgrade your cluster command line - gcloud container clusters upgrade standard-cluster-1 --zone us-central1-a  --master --cluster-version 1.14.
+3-gke.11
+Master of cluster [standard-cluster-1] will be upgraded from version
+[1.13.7-gke.8] to version [1.14.3-gke.11]. This operation is
+long-running and will block other operations on the cluster (including
+ delete) until it has run to completion.
+Do you want to continue (Y/n)?
