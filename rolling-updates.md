@@ -55,7 +55,24 @@ $ kubectl set image deployment nginx nginx=nginx:100.200.300 --record
 ```
 
 ```shell
-$ kubectl get pods
+(axial-method-253004)$ kubectl get pods -w
+NAME                     READY   STATUS         RESTARTS   AGE
+nginx-5fc6bc8999-hq9kz   0/1     ErrImagePull   0          33s
+nginx-5fc6bc8999-srsjw   0/1     ErrImagePull   0          33s
+nginx-7df4cb8544-lkg85   1/1     Running        0          4m29s
+nginx-7df4cb8544-qvjz4   1/1     Running        0          4m37s
+nginx-7df4cb8544-s6krl   1/1     Running        0          4m38s
+nginx-5fc6bc8999-srsjw   0/1   ImagePullBackOff   0     43s
+nginx-5fc6bc8999-hq9kz   0/1   ImagePullBackOff   0     44s
+nginx-5fc6bc8999-srsjw   0/1   ErrImagePull   0     56s
+nginx-5fc6bc8999-hq9kz   0/1   ErrImagePull   0     57s
+nginx-5fc6bc8999-srsjw   0/1   ImagePullBackOff   0     70s
+nginx-5fc6bc8999-hq9kz   0/1   ImagePullBackOff   0     72s
+nginx-5fc6bc8999-srsjw   0/1   ErrImagePull   0     109s
+nginx-5fc6bc8999-hq9kz   0/1   ErrImagePull   0     111s
+nginx-5fc6bc8999-srsjw   0/1   ImagePullBackOff   0     2m4s
+nginx-5fc6bc8999-hq9kz   0/1   ImagePullBackOff   0     2m4s
+
 ```
 
 ## Undo Update
