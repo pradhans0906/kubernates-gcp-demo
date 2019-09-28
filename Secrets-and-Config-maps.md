@@ -8,9 +8,9 @@ kubectl get secrets
 ```
 
 Create the configmaps
-
-kubectl create configmaps nginx-config --from-file=files/nginx-custom.conf
-
+```shell
+kubectl create configmaps nginx-config --from-file nginx-custom.conf
+```
 To view configmaps
 ```shell
 kubectl get configmaps
