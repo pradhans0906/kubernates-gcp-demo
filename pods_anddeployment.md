@@ -24,4 +24,6 @@ Delete the `nginx` deployment:
 $ kubectl delete deployment nginx
 ```
 
+```shell
 kubectl run tmp-shell --generator=run-pod/v1 --rm -i --tty --overrides='{"spec": {"hostNetwork": true}}' --image nicolaka/netshoot -- /bin/bash - to run a network pod to connect to different pod 
+```
