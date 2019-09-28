@@ -7,12 +7,11 @@
  deployment.extensions/nginx created
 ```
 Verify that the deployment is created:
-
+```shell
  kubectl get deployments
 NAME        DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 nginx       1         1         1            1           36s
 ```
-
 verify pods 
 
 ```shell
