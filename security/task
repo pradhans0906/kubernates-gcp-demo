@@ -1,0 +1,27 @@
+create cluster 
+Add 2 new user - admin and  dev
+service account - viewer role to wrk with cloud storage 
+set pod security policies  
+
+IAM- add -user emailid - select role and add kubernates admin
+
+     add -2nduser email id - select role and add kubernatesengine dev
+
+service account : Role k8viewer - service account - create service accout - name it - skip the rest and click done.
+
+pod security - connect to the cluster and run cloud shell 
+
+provide yourself a ability to create role - kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user <emailid>
+
+create a namespace 
+
+kubectl create namespace <ns>
+
+create pod secirity policy resource
+    ```shell
+       kubectl apply -f psp.yml
+       kubectl apply -f clusterrole.yml
+       kubectl apply -f rolebinding.yml
+       gcloud container cluster update <name of your cluster> --enable-pod-security-policy 
+```
+
