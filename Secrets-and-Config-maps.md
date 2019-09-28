@@ -1,7 +1,9 @@
-kubectl create secret tls nginx-certs --cert=tls.crt --key=tls.key
 
-to view the secrets 
+
+To create and view the secrets 
+
 ```shell
+kubectl create secret tls nginx-certs --cert=tls.crt --key=tls.key
 kubectl get secrets
 ```
 
