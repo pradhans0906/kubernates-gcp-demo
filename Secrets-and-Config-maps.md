@@ -7,7 +7,7 @@ kubectl create secret tls nginx-certs --cert=tls.crt --key=tls.key
 kubectl get secrets
 ```
 
-Create the congigmaps
+Create the configmaps
 
 kubectl create configmaps nginx-config --from-file=files/nginx-custom.conf
 
