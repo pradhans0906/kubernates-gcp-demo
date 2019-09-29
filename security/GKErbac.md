@@ -29,7 +29,18 @@ Cluster master ip rotation
 
     inititite ip rotaion :
 ```shell
-   gcloud container clusters update crendentials <nameof the cluster> --start-ip-rotation
+   gcloud container clusters update your-first-cluster-1 --zone us-central1-a --start-ip-rotation
+This will start an IP Rotation on cluster [your-first-cluster-1]. The
+master will be updated to serve on a new IP address in addition to the
+ current IP address. Kubernetes Engine will then recreate all nodes (1
+ nodes) to point to the new IP address. This operation is long-running
+ and will block other operations on the cluster (including delete)
+until it has run to completion.
+
+Do you want to continue (Y/n)?  y
+
+Updating your-first-cluster-1...⠼   
+
 ```
 
 update new ip addrss for the client 
