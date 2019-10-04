@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-nginx
+  labels:
+    name: pvc-nginx
+    app: efk
+spec:
+  # If you are using dynamic provisioning, it is important to specify a storageClassName.
+  storageClassName: "standard"
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
