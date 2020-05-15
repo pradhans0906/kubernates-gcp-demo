@@ -23,12 +23,10 @@ verify pods
 
 Delete the `nginx` deployment:
 
-```shell
 $ kubectl delete deployment nginx
 ```
 Creating a standalone pod:
-Often times you will need to create a pod, without making it a member of a deployment or daemon-set, or anything else. For those instances, here is how you would create a standalone pod.
-
+```shell
 apiVersion: v1
 kind: Pod
 metadata:
@@ -37,6 +35,7 @@ spec:
   containers:
   - name: nginx
     image: nginx:alpine
+```shell
 Save the above few lines of code as a yaml file, and use kubectl create -f <filename> to create this pod.
 
 $ kubectl create -f files/standalone-nginx-pod.yaml 
