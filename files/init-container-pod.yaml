@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-container
+spec:
+  containers:
+  - name: nginx
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: www-data
+      mountPath: /usr/share/nginx/html
+  initContainers:
+  - name: init
+    image: alpine/git
+    command:
+    - git
+    - clone
+    - https://github.com/pradhans0906/nginx-website.git
+    - /www-data
+    volumeMounts:
+    - name: www-data
+      mountPath: "/www-data"
+  volumes:
+  - name: www-data
+    emptyDir: {}
