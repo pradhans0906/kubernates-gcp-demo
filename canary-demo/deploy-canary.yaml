@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo-canary
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: demo-app
+        track: canary
+        version: 1.0.0
+    spec:
+      containers:
+        - name: demo-canary
+          image: gcr.io/mykubenatesproject/demogreen:green
+          ports:
+            - name: http
+              containerPort: 80

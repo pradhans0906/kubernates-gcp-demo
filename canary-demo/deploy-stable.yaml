@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo-stable
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-app
+        track: stable
+        version: 1.0.0
+    spec:
+      containers:
+        - name: demo-stable
+          image: gcr.io/mykubenatesproject/demoblue:blue
+          ports:
+            - name: http
+              containerPort: 80

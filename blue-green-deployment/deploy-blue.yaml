@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo-blue
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demo-app
+        version: 1.0.0
+    spec:
+      containers:
+        - name: demo-blue
+          image: gcr.io/mykubenatesproject/demoblue:blue
+          ports:
+            - name: http
+              containerPort: 80
+          resources:
+            limits:
+              memory: 100Mi
