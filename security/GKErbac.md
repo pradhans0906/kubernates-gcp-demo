@@ -62,7 +62,7 @@ Credentials rotation for worker node :
 
 initiate crendentials
 ```shell
-   gcloud container clusters update crendentials <nameof the cluster> --start-ip-rotation
+   gcloud container clusters update crendentials <nameof the cluster> --start-crendential-rotation
    gcloud container cluster get crendentials <clustername>
    gcloud container clusters update <clustername> --complete-crendential-rotation
 ```
