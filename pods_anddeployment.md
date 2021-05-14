@@ -71,5 +71,5 @@ $
 ## This image has all the networking tools
 
 ```shell
-kubectl run tmp-shell --generator=run-pod/v1 --rm -i --tty --overrides='{"spec": {"hostNetwork": true}}' --image nicolaka/netshoot -- /bin/bash - to run a network pod to connect to different pod
+kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash - to run a network pod to connect to different pod
 ```
