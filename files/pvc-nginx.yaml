@@ -4,11 +4,10 @@ metadata:
   name: pvc-nginx
   labels:
     name: pvc-nginx
-    app: efk
 spec:
-  # If you are using dynamic provisioning, it is important to specify a storageClassName.
   storageClassName: "standard"
+  accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
+      storage: 100Mi
